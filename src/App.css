@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+  --red: #d01c28;
+  --gray: #2e2e2e;
+}
+
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* ================= COMMON ================= */
+
+.container {
+  max-width: 1280px;
+  margin: 20px auto; /* 👈 top & bottom = 40px */
+  padding: 0 16px;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  margin-top: 16px;
+  position: relative;
+}
+
+/* LOGO */
+.logo img {
+  height: 42px;
+}
+
+/* MENU */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  all: unset;
+  background: var(--red);
+  color: #fff;
+  padding: 6px 16px;
+  height: 32px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ================= HERO SECTION ================= */
+
+.Hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 88px);
+}
+
+/* HERO CONTENT */
+.Hero-content {
+  max-width: 520px;
+}
+
+/* NIKE STYLE HEADING */
+.Hero-content h1 {
+  font-size: 100px;
+  font-weight: 800;
+  line-height: 102px;
+  letter-spacing: -2px;
+  margin-bottom: 32px;
+  color: #000;
+}
+
+/* HERO PARAGRAPH */
+.Hero-content p {
+  max-width: 420px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--gray);
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+/* HERO BUTTONS */
+.hero-btn {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.hero-btn button {
+  all: unset;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero-btn button:first-child {
+  background: var(--red);
+  color: #fff;
+}
+
+.hero-btn button:last-child {
+  border: 1px solid var(--gray);
+}
+
+/* ================= SHOPPING SECTION ================= */
+
+.shopping {
+  margin-top: 16px;
+}
+
+.shopping p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.brand-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icons img {
+  width: 120px;
+}
+
+/* ================= HERO IMAGE ================= */
+
+.hero-image img {
+  width: 500px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  nav ul {
+    position: static;
+    transform: none;
+  }
+
+  .Hero {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .Hero-content h1 {
+    font-size: 64px;
+    line-height: 60px;
+  }
+
+  .Hero-content p {
+    margin: 0 auto 32px;
+  }
+
+  .hero-btn {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 360px;
+    margin-top: 32px;
+  }
+}
